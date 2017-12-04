@@ -1,0 +1,76 @@
+-- lab 4 bd--
+SET SERVEROUTPUT ON;
+declare
+procedure catel2(
+nume departments.department_name%type,
+id_dep DEPARTMENTS.DEPARTMENT_ID%type
+)
+AS
+Begin
+insert into departments(department_name, department_id) values (nume, id_dep);
+
+end catel2;
+
+BEGIN
+catel2('departament cateljhgliuh', 129);
+END;
+
+
+--3
+create or replace procedure girafa_lala
+is
+begin
+dbms_output.put_line('lalala');
+end girafa_lala;
+set serveroutput on;
+begin
+girafa_lala;
+end;
+execute girafa_lala;
+
+
+
+--
+create or replace procedure UPD_LALA
+is
+begin
+update jobs set job_title = 'modif llalal'
+where job_id = 'PR_REP'
+end;
+
+execute UPD_LALA
+
+
+--11
+create or replace procedure lala1(iddep number) is
+begin
+function functie return number is num number := 0
+begin
+    select count(*) into num from employees
+    where department_id := iddep;
+    return num;
+end functie;
+end lala1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
